@@ -1,4 +1,5 @@
-console.log('script loaded.');
+console.log('script loaded. v2');
+var scope = "default";
 
 if (location.host != "jedatu.github.io")
 {
