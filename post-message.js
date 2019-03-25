@@ -1,3 +1,8 @@
 console.log('script loaded.');
 
-setTimeout(() => { console.log("TEST:", parentVar)}, 3000);
+if (location.host != "jedatu.github.io")
+{
+    scope = document.getElementById("message").nodeValue;
+}
+
+setTimeout(() => { console.log("TEST:", scope)}, 3000);
