@@ -3,6 +3,14 @@ var scope = "default";
 
 if (location.host != "jedatu.github.io")
 {
-    scope = document.getElementById("message").value;
-    setInterval(() => { console.log("TEST:", scope)}, 3000);
+    setInterval(() => { 
+        scope = document.getElementById("message").value;
+        console.log("parent:", scope)
+    }, 3000);
 }
+else {
+    setInterval(() => { 
+        console.log("frame:", scope);
+    }, 3000);
+}
+
