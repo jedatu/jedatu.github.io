@@ -5,7 +5,7 @@ if (location.host != "jedatu.github.io")
 {
     setInterval(() => { 
         scope = document.getElementById("message").value;
-        document.getElementsByTagName("iframe")[0].contentWindow.postMessage(scope, "jedatu.github.io");
+        document.getElementsByTagName("iframe")[0].contentWindow.postMessage(scope, "https://jedatu.github.io");
         //scope = document.getElementsByTagName("iframe")[0].contentWindow.contentDocument;
         console.log("PARENT:", scope)
     }, 3000);
