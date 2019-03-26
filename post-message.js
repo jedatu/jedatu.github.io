@@ -1,4 +1,4 @@
-console.log('script loaded. v6');
+console.log('script loaded. v7');
 window.scope = "default";
 
 if (location.host != "jedatu.github.io")
@@ -20,8 +20,11 @@ else {
 
     function receiveMessage(event)
     {
-        document.getElementById("framed").innerHTML="IFrame Received: " + event.data + " from " + event.origin;
-        console.log("FRAME", event);
+        if (typeof(event.data) == "string")
+        {
+            document.getElementById("framed").innerHTML="IFrame Received: " + event.data + " from " + event.origin;
+            console.log("FRAME", event);
+        }
     }
 
     //setInterval(() => { 
