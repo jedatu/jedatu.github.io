@@ -7,6 +7,7 @@ if (location.host != "jedatu.github.io")
         var new_scope = document.getElementById("message").value;
         if (scope != new_scope)
         {
+            scope = new_scope;
             document.getElementsByTagName("iframe")[0].contentWindow.postMessage(scope, "https://jedatu.github.io");
             //scope = document.getElementsByTagName("iframe")[0].contentWindow.contentDocument;
             console.log("PARENT:", scope)
